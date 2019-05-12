@@ -1,0 +1,45 @@
+Deck_v2.2:
+-Cleaned much of the unneeded transforms that would make using in web env difficult. Still random transforms that need to be handled. my current mindset is that i should fix this problem in the processing of the paths used in the individual cards that should be in the defs and reused. 
+-NEXT THING TO DO: automate the following processes -> move reusable paths into the def section, translate each cards into a grid format ( hopefully make this reusable so I can later use it to stack deck ), replace redundent paths in individual cards with the <use>, think about resizing some of the assets to be rounder, at the moment I am thinking that I will have to indivually transform the internal assets into proper position an optimal solution would be find a way to automate this process
+
+
+-removed transform from rect
+-changed m value in the internal assets to 0,0
+-moved club and std_card into defs
+-resized std_card to match to standard 2.5inch width 3.5inch height
+-center of std_card is 93.5,131
+-now I need to resize the clubsuit def to be scaled to the new card size
+
+m 0,0 c -9.77448,0.2122 -14.15742,11.2172 -6.91838,19.7632 1.04991,1.2466 1.15822,1.9619 -0.76457,0.7646 -4.87385,-3.2592 -14.219261,-1.1167 -14.697811,8.8472 -0.59115,12.277 16.562851,15.8143 19.783711,2.7597 0.17004,-1.3774 1.28941,-1.3459 1.01952,0.6092 -0.29367,5.3064 -1.95083,10.266 -4.22862,15.1025 3.83908,0 8.12955,0 11.62019,0 C 3.53636,43.0099 1.87909,38.0503 1.58541,32.7439 1.31552,30.7888 2.4349,30.7573 2.60494,32.1347 5.8258,45.1893 22.9798,41.652 22.38865,29.375 21.9102,19.4111 12.56469,17.2686 7.69084,20.5278 5.76806,21.7251 5.87637,21.0098 6.92627,19.7632 14.16532,11.2172 9.78237,0.2122 0.00798,0 c 0,-1e-4 0,0 -0.01,0 z
+
+m 0,0 c -9.8183,0.21294 -14.2209,11.25327 -6.9494,19.82671 1.0546,1.25053 1.1634,1.96817 -0.768,0.76698 -4.8957,-3.26965 -14.283,-1.12021 -14.7637,8.87567 -0.5938,12.31634 16.6371,15.86501 19.8724,2.76852 0.1708,-1.38178 1.29521,-1.35025 1.0241,0.61112 -0.295,5.32344 -1.9596,10.299 -4.2476,15.15099 3.8563,0 8.166,0 11.6723,0 -2.2879,-4.85199 -3.9526,-9.82755 -4.2476,-15.15099 -0.2711,-1.96137 0.8533,-1.9929 1.0241,-0.61112 3.2353,13.09649 20.4662,9.54782 19.8724,-2.76852 -0.4806,-9.99588 -9.868,-12.14532 -14.7637,-8.87567 -1.9314,1.20119 -1.8226,0.48355 -0.768,-0.76698 7.2715,-8.57344 2.8689,-19.61376 -6.9493,-19.82671 0,-6e-5 0,5e-5 -0.01,0 z
+
+OLD_CARD DIMENSIONS: 
+-height: 311.81104 
+-width: 223.22835
+
+STD_CARD DIMENSIONS:
+-height: 262
+-width: 187
+
+scale: h-0.84025 v-0.8377
+
+
+POST-SCALE-CLUB PATH: (HAlF CLUB)
+m 0,0 c 6.694537,-0.150963 12.892467,8.339266 5.818166,16.601088 -0.927511,1.083206 -0.797167,1.345955 0.642241,0.642266 10.14811,-4.961148 12.35439,5.785145 12.34616,7.431645 -0.0547,10.95697 -13.321437,12.9757 -16.618317,2.31815 -0.507935,-1.64196 -0.824931,-0.64669 -0.891503,0.0406 -0.438266,4.52464 3.587146,13.15721 3.587146,13.15721 H -0.001598 L 2e-6,0 Z
+
+X2 with one having attribute transform:scale(-1,1)
+
+To get new reusable club paths into the center of card x:93.5 y:111 (since the height of club path is approx 40 so we subract the height of the card/2 - 20 )
+
+Index suite asset for club have a scale factor of 0.42 
+
+to reverse and place in bottom left of card matrix(1,0,0,-1,178.5,262) -> matrix(1,0,0,-1,173.5,257) with 5px margin with card
+
+to put index_top_a_clubs_suit in place x:20 y:70
+to put index_bottom_a_clubs_suit in place x:0 y:70
+to put index_bottom_a_clubs_num in place x:-8.5
+
+
+
+
